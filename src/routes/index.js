@@ -5,28 +5,26 @@ import About from './About'
 import NotFound from './NotFound'
 
 export default createRouter({
-  // Hash, History
   history: createWebHashHistory(),
-  scrollBehavior(){
-    return {top:0}
+  scrollBehavior() {
+    return { top: 0 }
   },
-  // pages
-  routes : [
+  routes: [
     {
-      path : '/' ,
+      path: '/',
       component: Home
     },
     {
-      path : '/movie/:id',
-      component : Movie
+      path: '/movie/:id',
+      component: Movie
     },
     {
-      path : '/about',
-      component : About
+      path: '/about',
+      component: About
     },
     {
-      path : '/:notfound(.*)',
-      component : NotFound
+      path: '/:notFound(.*)',
+      component: NotFound
     }
   ]
 })

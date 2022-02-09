@@ -1,7 +1,7 @@
 <template>
-    <Headline />
-    <Search />
-    <MovieList />
+  <Headline />
+  <Search />
+  <MovieList />
 </template>
 
 <script>
@@ -10,13 +10,13 @@ import Search from '~/components/Search'
 import MovieList from '~/components/MovieList'
 
 export default {
-   components : {
-        Headline,
-        Search,
-        MovieList
-   },
-   created(){
-       this.$store.commit('movie/resetMovies')
-   }
+  components: {
+    Headline,
+    Search,
+    MovieList
+  },
+  created() {
+    this.$store.commit('movie/resetMovies')
+  }
 }
 </script>

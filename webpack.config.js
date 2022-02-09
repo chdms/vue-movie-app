@@ -1,11 +1,9 @@
-const _require = id => require(require.resolve(id, { paths: [require.main.path] }))
-
 // path: NodeJS에서 파일 및 디렉토리 경로 작업을 위한 전역 모듈
-const path = _require('path')
-const HtmlPlugin = _require('html-webpack-plugin')
-const CopyPlugin = _require('copy-webpack-plugin')
-const { VueLoaderPlugin } = _require('vue-loader')
+const path = require('path')
+const HtmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   resolve: {
@@ -45,8 +43,8 @@ module.exports = {
           'css-loader',
           'postcss-loader',
           {
-            loader : 'sass-loader',
-            options : {
+            loader: 'sass-loader',
+            options: {
               additionalData: '@import "~/scss/main";'
             }
           }
